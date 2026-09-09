@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: mcp-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 123.57.238.14:8848
+        username: nacos
+        password: ******
+        file-extension: yml
+        namespace: public
+        group: DEFAULT_GROUP
+      discovery:
+        server-addr: 123.57.238.14:8848
+        username: nacos
+        password: ******
+        namespace: public
+
+server:
+  port: 9004
+
+mcp:
+  services:
+    gateway-url: http://localhost:8080
+
+# 自定义日志配置
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){cyan} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    com.bitejiuyeke.mcp: DEBUG
+    root: INFO

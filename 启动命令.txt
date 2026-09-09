@@ -1,0 +1,1 @@
+nohup java -Xms256m -Xmx512m -jar geteway-service-1.0.0.jar > geteway-service.log 2>&1 &
